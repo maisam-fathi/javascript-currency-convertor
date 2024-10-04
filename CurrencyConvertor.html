@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurrencyConvertor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        div{
+            min-height: 100px;
+            margin-bottom: 50px;
+        }
+        body{
+            background-color: rgb(210, 210, 210);
+            font-family: "Roboto", sans-serif;
+            font-size: 24px;
+            color:rgb(63, 63, 63);
+            
+        }
+        .navbar{
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background-color: rgba(10, 10, 10, 0.08);
+        }
+
+        .flag{
+            width: 85px;
+            position: absolute;
+            left: 20%;
+        }
+        input{
+            background-color: rgb(180, 180, 180);
+            height: 54px;
+            border: 2px solid rgba(50, 50, 50,0.3);
+            border-radius: 15px;
+            flex: 1;
+            margin: 10px 5px 10px 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-size: 24px;
+            text-align: right;
+            max-width: 65%;
+        }
+        .input-container{
+
+            background-color: beige;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 12px;
+            padding-left: 24px;
+        }
+        .container-center{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        button{
+
+        background-color:beige;
+        padding: 0px 50px;
+        margin: 15px;
+        height: 63px;
+        font-size: 18px;
+        border: unset;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgb(0, 0, 0,0.8);
+        cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="navbar">
+        <img src="img/menu.png">Währungsrechner
+    </div>
+
+    <div class="input-container">
+        <img class="flag" src="img/eu.png">
+        <input id="eurField" type="text">€
+    </div>
+
+    <div class="container-center">
+        <img src="img/arrows.png">
+    </div>
+
+    <div class="input-container">
+        <img class="flag" src="img/usa.png">
+        <input id="usdField" type="text">$
+    </div>
+
+    <div class="container-center">
+
+        <button onclick="calcusd()">€ => $</button>
+        <button onclick="calceur()">$ => €</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
